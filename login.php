@@ -3,10 +3,6 @@ session_start();
 
 include "koneksi.php";
 
-//$username = mysqli_real_escape_string($connect, $_POST['username']);
-//$password = mysqli_real_escape_string($connect, $_POST['password']);
-//$password = md5($password);
-
 $sql = mysqli_query($connect, "SELECT * FROM data WHERE username= '$_POST[username]' AND password ='$_POST[password]' ");
 $data = mysqli_fetch_array($sql);
 
